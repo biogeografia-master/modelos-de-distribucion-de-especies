@@ -37,11 +37,12 @@ Versión HTML (quizá más legible),
 
 2.  **REPRODUCE EL VÍDEO DE APOYO** para comprender el código de Python
     y sus resultados. Tienes un vídeo de apoyo exclusivo para esta
-    práctica, disponible [aquí](). El vídeo explica cómo realizar, y en
-    qué consisten, los análisis necesarios para modelizar distribución
-    de especies usando algoritmos de *machine learning* en Python, con
-    aplicación a la especie *Pinus occidentalis* en República
-    Dominicana.
+    práctica, cuyo enlace encontrarás en el [portal de la
+    asignatura](https://github.com/biogeografia-202402). El vídeo
+    explica cómo realizar, y en qué consisten, los análisis necesarios
+    para modelizar distribución de especies usando algoritmos de
+    *machine learning* en Python, con aplicación a la especie *Pinus
+    occidentalis* en República Dominicana.
 
 3.  Elige una especie en GBIF bien representada en República Dominicana.
     Esta fase es de exploración, así que usa mejor la [interfaz web de
