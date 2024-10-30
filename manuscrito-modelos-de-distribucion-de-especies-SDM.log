@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.16)  30 OCT 2024 17:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.16)  30 OCT 2024 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1066,8 +1066,10 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 10
 5.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (./manuscrito-modelos-de-distribucion-de-especies-SDM.aux
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
 )
-No file manuscrito-modelos-de-distribucion-de-especies-SDM.aux.
 \openout1 = `manuscrito-modelos-de-distribucion-de-especies-SDM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
@@ -1167,6 +1169,8 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 105.
 LaTeX Info: Redefining \pageref on input line 105.
 LaTeX Info: Redefining \nameref on input line 105.
+(./manuscrito-modelos-de-distribucion-de-especies-SDM.out) (./manuscrito-modelo
+s-de-distribucion-de-especies-SDM.out)
 \@outlinefile=\write6
 \openout6 = `manuscrito-modelos-de-distribucion-de-especies-SDM.out'.
 
@@ -1230,8 +1234,8 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'manuscrito-modelos-de-distribucion-de-especies
--SDM.bbl' not found.
-No file manuscrito-modelos-de-distribucion-de-especies-SDM.bbl.
+-SDM.bbl' found.
+(./manuscrito-modelos-de-distribucion-de-especies-SDM.bbl)
 Package biblatex Info: Reference section=0 on input line 105.
 Package biblatex Info: Reference segment=0 on input line 105.
 LaTeX Info: Redefining \sptext on input line 105.
@@ -1388,22 +1392,10 @@ Underfull \hbox (badness 6016) in paragraph at lines 224--231
 Underfull \vbox (badness 4981) has occurred while \output is active []
 
 [2]
-
-LaTeX Warning: Reference `tab:tablaejemplokable' on page 3 undefined on input l
-ine 267.
-
-
-LaTeX Warning: Reference `tab:tablaejemplomanualmente' on page 3 undefined on i
-nput line 287.
-
-
-LaTeX Warning: Reference `fig:figuramanual' on page 3 undefined on input line 3
-25.
-
-<figura-ejemplo.jpg, id=34, 401.5pt x 401.5pt>
+<figura-ejemplo.jpg, id=67, 401.5pt x 401.5pt>
 File: figura-ejemplo.jpg Graphic file (type jpg)
 <use figura-ejemplo.jpg>
-Package pdftex.def Info: figura-ejemplo.jpg  used on input line 327.
+Package pdftex.def Info: figura-ejemplo.jpg  used on input line 326.
 (pdftex.def)             Requested size: 401.49901pt x 401.49901pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1412,10 +1404,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.328 
+l.327 
       ]
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-334.
+333.
 (/usr/share/texmf/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1427,30 +1419,26 @@ Package microtype Info: Character `texttrademark ' is missing
 (microtype)             in font `TS1/lmtt/m/n/10'.
 (microtype)             Ignoring protrusion settings for this character.
 <manuscrito-modelos-de-distribucion-de-especies-SDM_files/figure-latex/figuraco
-ncodigo-1.pdf, id=44, 436.63126pt x 252.945pt>
+ncodigo-1.pdf, id=75, 436.63126pt x 252.945pt>
 File: manuscrito-modelos-de-distribucion-de-especies-SDM_files/figure-latex/fig
 uraconcodigo-1.pdf Graphic file (type pdf)
 <use manuscrito-modelos-de-distribucion-de-especies-SDM_files/figure-latex/figu
 raconcodigo-1.pdf>
 Package pdftex.def Info: manuscrito-modelos-de-distribucion-de-especies-SDM_fil
-es/figure-latex/figuraconcodigo-1.pdf  used on input line 352.
+es/figure-latex/figuraconcodigo-1.pdf  used on input line 351.
 (pdftex.def)             Requested size: 234.87749pt x 136.06721pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [4 <./figura-ejemplo.jpg>]
 
-LaTeX Warning: Reference `fig:figuraconcodigo' on page 5 undefined on input lin
-e 362.
-
-
-LaTeX Warning: Empty bibliography on input line 364.
+LaTeX Warning: Empty bibliography on input line 363.
 
 [5pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.367 \end{document}
+l.366 \end{document}
                      <./manuscrito-modelos-de-distribucion-de-especies-SDM_file
 s/figure-latex/figuraconcodigo-1.pdf>] (./manuscrito-modelos-de-distribucion-de
 -especies-SDM.aux
@@ -1464,19 +1452,9 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `manuscrito-modelos-de-distribucion-de-esp
-ecies-SDM.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `manuscrito-modelos-de-distribucion-
-de-especies-SDM.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  E0E1CB005EA4394EEE2310A238524571;3073.
+Package rerunfilecheck Info: File `manuscrito-modelos-de-distribucion-de-especi
+es-SDM.out' has not changed.
+(rerunfilecheck)             Checksum: E0E1CB005EA4394EEE2310A238524571;3073.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                manuscrito-modelos-de-distribucion-de-especies-SDM
@@ -1488,10 +1466,10 @@ Package logreq Info: Writing requests to 'manuscrito-modelos-de-distribucion-de
 
  ) 
 Here is how much of TeX's memory you used:
- 34741 strings out of 478287
- 658110 string characters out of 5849289
- 1450957 words of memory out of 5000000
- 52242 multiletter control sequences out of 15000+600000
+ 34760 strings out of 478287
+ 658688 string characters out of 5849289
+ 1452398 words of memory out of 5000000
+ 52253 multiletter control sequences out of 15000+600000
  535626 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,94p,1047b,2802s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1506,10 +1484,10 @@ mcsco10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf
 /type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
 Output written on manuscrito-modelos-de-distribucion-de-especies-SDM.pdf (5 pag
-es, 309385 bytes).
+es, 309764 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 157 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
  18 named destinations out of 1000 (max. 500000)
- 38935 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 39007 words of extra memory for PDF output out of 42996 (max. 10000000)
 

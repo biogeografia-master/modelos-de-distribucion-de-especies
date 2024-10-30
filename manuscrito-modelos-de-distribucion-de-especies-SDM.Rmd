@@ -163,10 +163,10 @@ Table:Título de la tabla de ejemplo generada manualmente.\label{tab:tablaejempl
 
 ## Poner título y usar referencias cruzadas para figuras insertadas manualmente
 
-Para insertar una figura manualmente (el archivo debe estar disponible en la ruta donde es llamado, en este caso, en el directorio raíz del repo), es necesario hacero usando la sintaxis apropiada mostrada abajo (nota que apliqué un redimensionamiento a 35%, pero no es obligatorio).
+Para insertar una figura manualmente (el archivo debe estar disponible en la ruta donde es llamado, en este caso, en el directorio raíz del repo), es necesario hacero usando la sintaxis apropiada mostrada abajo.
 
 \begin{Verbatim}[samepage=true]
-![Una figura de ejemplo insertada manualmente](figura-ejemplo.jpg){width=25%,height=25%}
+![Una figura de ejemplo insertada manualmente](figura-ejemplo.jpg)
 \label{fig:figuramanual}
 \end{Verbatim}
 
@@ -174,7 +174,7 @@ La sintaxis para insertar la referencia cruzada sería ésta: `Ver Fig. \ref{fig
 
 Luego del tejido, la referencia cruzada se vería así "Ver Fig. \ref{fig:figuramanual}" y la figura propiamiente se vería así:
 
-![Una figura de ejemplo insertada manualmente](figura-ejemplo.jpg){width=25%,height=25%}
+![Una figura de ejemplo insertada manualmente](figura-ejemplo.jpg)
 \label{fig:figuramanual}
 
 
