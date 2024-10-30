@@ -1,0 +1,117 @@
+---
+title: "Práctica de desarrollo 4. PD04. Modelos de distribución de especies (SDM) con un conjunto de algoritmos de aprendizaje automático (*machine learning*)<small><br>Biogeografía (GEO-131)<br>Universidad Autónoma de Santo Domingo (UASD)<br>Semestre 2024-02</small>"
+author: "El Tali"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+  # bookdown::github_document2:
+  #   number_sections: false
+  #   fig_caption: yes
+  bookdown::html_document2:
+    number_sections: false
+    code_folding: hide
+    fig_caption: yes
+    md_extensions: "-fancy_lists"
+    toc: true
+    toc_depth: 3
+editor_options: 
+  chunk_output_type: console
+always_allow_html: true
+bibliography: biblio.bib
+csl: apa-es.csl
+lang: es
+---
+
+<!-- README.md se genera a partir de README.Rmd. Por favor, edita ese archivo. -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, out.width = '100%', fig.retina = 4)
+```
+
+```{r, include=F}
+output_format <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+repo_url <- system("git config --get remote.origin.url", intern = TRUE)
+repo_name <- sub(".git$", "", basename(repo_url))
+org_name <- basename(dirname(repo_url))
+rmd_filename <- tools::file_path_sans_ext(basename(knitr::current_input()))
+github_pages_url <- paste0("https://", org_name, ".github.io/", repo_name, "/", rmd_filename, ".html")
+```
+
+```{r, results='asis', echo=F}
+if (grepl('gfm', output_format)) {
+  cat('Versión HTML (quizá más legible), [aquí](', github_pages_url, ')\n', sep = '')
+} else if (output_format == 'latex') {
+  cat('Versión HTML (quizá más legible), [aquí](', github_pages_url, ')\n', sep = '')
+}
+```
+
+
+# Fecha/hora de entrega
+
+**12 de noviembre de 2024, 11:59 pm.**
+
+# Objetivos
+
+
+# Mandato
+
+1. Busca una especie (debe ser a nivel de especie) en GBIF bien representada en República Dominicana. "Bien representada" es difícil de definir, pero son elegibles aquellas con entre 200 y 500 registros de presencia. Sin embargo, lo más importante es que la especie elegida no tenga todos sus registros concentrados en un pequeño cúmulo. No se trata de una especie que esté en todas partes, sino de una que tenga muchos registros bien distribuidos. Si notas que la especie sigue un patrón de alguna variable climática, geológica o fisiográfica, es válida para la elección. Puedes preguntar al ChatGPT, aunque normalmente no acierta con los criterios.
+
+2.**IMPORTANTE**. Anuncia tu elección en el foro; si ya está elegida, deberás elegir otra.
+
+
+2. Inicia sesión en el servidor JupyterHub. Sube sólo los siguientes archivo (por ahora, no tienes que clonar el repo, pues en JupyterHub tal cosa no existe realmente):
+    - [Modelos de distribución de especies (SDM) con un conjunto de algoritmos de aprendizaje automático (*machine learning*). *Aplicación a Pinus occidentalis*](https://github.com/biogeografia-master/modelos-de-distribucion-de-especies/modelos-de-distribucion-de-especies-SDM.ipynb)
+    - [Variables ambientales generadas por estadística zonal, usando el índices espacial H3 a resolución 7 (hexágonos de aproximadamente 3.8 km^2) y datos geoespaciales del catálogo de Earth Engine](https://github.com/biogeografia-master/modelos-de-distribucion-de-especies/all_sources_all_variables_res_7.gpkg)
+    Estos datos te servirán para ver un cuaderno donde realicé la predicción de distribución potencial de *Pinus occidentalis*, el cual podrás usar para adaptarlo a tu especie. Te recomiendo que intentes comprender la lógica del código, sin perderte en los detalles. Sin embargo, es importante en este caso que intentes ejecutar, celda a celda el código de Python (así se llaman los bloques de código en cuadernos Jupyter); recuerda desactivar el traductor para el servidor si aún lo tienes activado. Tal como lo lees, es importante ejecutar celda a celda, para ver qué cosas producen. Intentar comprenderlas también es importante, pero puede resultar abrumador. Lo más importante es que adaptes el código de dicho cuaderno a tu especie elegida, controlando en todo momento los resultados obtenidos y editando las líneas allí donde tengas que hacerlo (no son muchos lugares realmente que necesitas personalizar) sobre él propio cuaderno. Recuerda que el código en dicho cuaderno sigue una lógica secuencial, por lo que los bloques posteriores dependerán de los anteriores.
+
+  **TIENES UN VÍDEO DE APOYO**. Esta vez, tienes un vídeo de apoyo exclusivo para esta práctica. 
+  
+  - []()
+
+3. Revisa bibliografía sobre los algoritmos de predicción empleados (el ejemplo es una buena base, pero puedes incluir otras técnicas). No puedes usar estos algoritmos sin saber de qué tratan, aunque no tienes por qué entrar en los detalles. Los parámetros de configuración de los algoritmos, así como el criterio de selección de un algoritmo sobre otro, son extremadamente importantes. Eso sí, la bibliografía sobre este tema es muy densa, pero te recomiendo que consultes tanto libros como artículos científicos con casos de uso.
+
+4. Vuelve a RStudio y, AHORA SÍ, clona el repo y redacta un manuscrito. Para el procesamiento de tu texto y la redacción de tus análisis, usa la plantilla `manuscrito-modelos-de-distribucion-de-especies-SDM.Rmd`, que se encuentra en este mismo repositorio. Con esta plantilla generarás un PDF que tejeras a usando RStudio. Para hacerlo, deberás clonar este repositorio, yendo al [portal de la asignatura](https://github.com/biogeografia-202402), haz clic en el enlace de la PD04 y acepta la asignación. Deberás usar estilos de formato (los títulos debidamente escritos, el texto normal también, siguiendo lo aprendido en las PD anteriores), referencias bibliográficas, referencias cruzadas a figuras y tablas (es decir, necesitarás que las figuras y tablas tengan título o "*caption*"). No podrás desarrollar tu redacción usando listas de viñetas ni listas numeradas. Debes usar la plantilla mencionada en RStudio, preferiblemente en mi servidor, tal como hiciste en las PD anteriores. Cuando termines tu manuscrito con tus análisis reproducibles, y lo tejas a PDF, no olvides hacer commit>push de todos tus cambios para subirlos a GitHub. Esta vez, sólo usarás RStudio para integrar los resultados, especialmente para incluir los gráficos y mapas resultantes que generaste en JupyterHub (puedes descargar las figuras que generaste en el cuaderno de JupyterHub y subirlas a RStudio). Necesitarás citar bibliografía, no lo podrás evitar, tanto en la introducción, como en la metodología y la discusión. No olvides citar los datos de GBIF; en su página encontrarás métodos para ello.
+
+Distribuye tu texto en las siguientes secciones:
+
+- **Introducción** (tamaño recomendado: 3 párrafos). Desde lo amplio, puedes comenzar escribiendo sobre GBIF y su potencial, el repositorio de estadística zonal de RD [@jose_ramon_martinez_batlle_2022_7367180], así como sobre la especie elegida y su importancia para RD o la isla. A continuación, explica en qué consisten la modelización de distribución de especies que aplicarás, en este caso, usando algoritmos de *machine learning*, destacando su importancia, por qué son útiles y que los hace especiales respecto de otros modelos. Plantea tu o tus objetivos, que en este caso están algo acotados. Cierra con la importancia que reviste la aplicación de la modelización de distribución para la especie elegida respecto del conjunto de la ciencia.
+
+    - Dentro de esta sección, debes incluir al menos cinco citas. Los conceptos y afirmaciones ajenas, deben citarse bibliográficamente, y nunca deberás usar cita textual, pues se considera plagio. Las citas bibliográficas que incluyas, deberán estar respaldadas por su correspondiente lista referencias, la cual deberá aparecer en la sección final (Referencias); el propio tejido de RMarkdown debería generarla por ti, siempre que sigas las instrucciones correspondientes (vuelve al vídeo de la PD01 para refrescar). Las citas y la lista de referencias, deberán seguir el estándar APA 7ma edición (APA7), que es el que la propia plantilla tiene configurado por defecto; en principio, no tendrás que ocuparte de todos los detalles de sintaxis del formato APA7, pero no debes confiar ciegamente en lo que hace RMarkdown.
+
+- **Materiales y métodos** (tamaño recomendado: cuatro párrafos). Explica cómo obtuviste los datos que usaste, y documenta en qué consiste la fuente (no sólo los datos de presencia de GBIF, sino también los de variables ambientales). Los registros de presencia de este ejercicio se generaron con el cuaderno `modelos-de-distribucion-de-especies-SDM.ipynb`, el cual ya habrás aplicado a tu especie y que se encuentra en este mismo repo. Debes citar específicamente GBIF, usando la recomendación que ofrecen en su página web. Debes citar el repo de estadística zonal, de donde vino el archivo de variables ambientales `all_sources_all_variables_res_7.gpkg`; dicho repo se encuentra en [este enlace](https://github.com/geofis/zonal-statistics), y dispone de una entrada BiTeX para ayudarte con la cita [aquí](https://github.com/geofis/zonal-statistics?tab=readme-ov-file#entrada-bibtex).
+
+Debes igualmente citar el software y hardware usado, y las referencias sobre la técnica o algoritmo empleados. Ten presente que la bibliografía sobre *machine learning* en Python es muy pero que muy densa, así que deberás hacer una selección apropiada. Si incluyes un diagrama de flujo metodológico ("metodología gráfica"), te resultará más fácil explicar tu metodología. **No adelantes resultados, sólo escribe qué fuentes y herramientas usaste (materiales), qué técnicas concretas o algoritmos utilizaste (métodos), y qué configuraciones aplicaste a los algoritmos**. Toda figura y tabla que insertes debe citarse con referencia cruzada, para lo cual dispones de una guía con ejemplos al final de la plantilla de manuscrito (archivo: `manuscrito-modelos-de-distribucion-de-especies-SDM.Rmd`).
+
+- **Resultados** (tamaño recomendado: 4 párrafo). Los registros de presencia obtenidos, su número, sus descriptores básicos de posición y distribución, las variables ambientales y su relación con los registros de presencia y pseudoausencias, las predicciones obtenidas según cada algoritmo, descritas usando orientaciones cardinales y referencias geográficas. No hagas valoraciones en esta sección, simplemente incluye los resultados obtenidos.
+
+- **Discusión** (tamaño recomendado: 4 párrafos). Abre la discusión indicando si alcanzaste tus objetivos. Describe por qué era importante alcanzarlos. Interpreta los resultados, e indica cuál de las modelizaciones se acerca más a lo que se esperaría, y/o cuáles modelizaciones ofrecen resultados poco fiables. Interpreta por qué, sí aplica, la probabilidad de presencia (o la presencia predicha en sí misma, dependiendo del enfoque que hayas usado), no concuerda en determinados lugares, o por qué concuerda en muchos lugares, apoyándote en el poder predictivo que, según entiendas, tienen determinadas variables ambientales. Comenta sobre las limitaciones, de cualquier tipo, ya sea las limitaciones de los datos, de la técnicas, de los objetivos de aprendizaje. Cierra indicando qué desafíos futuros quedan abiertos tras este trabajo.
+
+- **Referencias**. Las referencias que hayas citado en el texto, se incluirán automáticamente en la sección "Referencias". No obstante, debes verificar la integridad de las mismas.
+
+> **RECUADRO: recomendaciones básicas de redacción**
+> 
+> Usa una voz (activa o pasiva) de forma consistente, pero sólo ten presente que la redacción de manuscritos científicos a menudo se utilizan ambas voces, dependiendo del contexto y el mensaje que el/la autor/a quiera transmitir. Veamos algunos ejemplos:
+> 
+> **Voz activa en manuscrito científicos:**
+> 
+> - **Analicé** los datos utilizando el lenguaje de programación Python.
+> 
+> - El experimento **mostró** que la temperatura afecta directamente la tasa de reacción.
+> 
+> - Los investigadores **encontraron** una correlación significativa entre las dos variables.
+> 
+> La voz activa puede hacer que la redacción parezca más directa y clara, y es especialmente útil cuando el/la autor/a quiere enfatizar quién llevó a cabo una acción o cuándo se desea hacer una afirmación fuerte.
+> 
+> **Voz pasiva en artículos científicos:**
+> 
+> - Los datos **fueron analizados** utilizando el lenguaje de programación Python.
+> 
+> - **Se observó** que la temperatura afecta directamente la tasa de reacción.
+> 
+> - Una correlación significativa **fue encontrada** entre las dos variables.
+> 
+> La voz pasiva es común en la redacción científica porque a menudo se prefiere un tono más impersonal, enfocando la atención en los resultados y procedimientos en lugar de en quienes llevaron a cabo la investigación. También puede ser útil cuando no se quiere o no es relevante especificar quién realizó la acción.
+> 
+> **En todas mis prácticas, está completamente permitido usar IA (e.g. chatGPT), pero te recomiendo que la uses más como tutor que como redactor**. Tal como te sugerí arriba, no le pidas que te resuelva los problemas del mandato. Pídele que te dé ideas, y que luego tú las mejores o las descartes. No abuses tampoco del texto, pues mucha redacción no siempre es mejor; en redacción de ensayos "menos es más". Cruza las redacciones que te ofrezca con tu conocimiento, y revisa si los términos o conceptos usados son descabellados (toda IA se inventa cosas, cuidate de no caer en esa trampa). Nunca le pidas referencias bibliográficas, porque se va equivocar.
+
+# Referencias
