@@ -19,7 +19,10 @@ Versión HTML (quizá más legible),
 
 # Mandato
 
-1.  Busca una especie (debe ser a nivel de especie) en GBIF bien
+1.  **REPRODUCE EL VÍDEO DE APOYO**. Esta vez, tienes un vídeo de apoyo
+    exclusivo para esta práctica, disponible [aquí]().
+
+2.  Busca una especie (debe ser a nivel de especie) en GBIF bien
     representada en República Dominicana. “Bien representada” es difícil
     de definir, pero son elegibles aquellas con entre 200 y 500
     registros de presencia. Sin embargo, lo más importante es que la
@@ -31,44 +34,41 @@ Versión HTML (quizá más legible),
     preguntar al ChatGPT, aunque normalmente no acierta con los
     criterios.
 
-2.**IMPORTANTE**. Anuncia tu elección en el foro; si ya está elegida,
-deberás elegir otra.
+3.  **IMPORTANTE**. Anuncia tu elección en el foro; si ya está elegida,
+    deberás elegir otra.
 
-2.  Inicia sesión en el servidor JupyterHub. Sube sólo los siguientes
+4.  Inicia sesión en el servidor JupyterHub. Sube sólo los siguientes
     archivo (por ahora, no tienes que clonar el repo, pues en JupyterHub
     tal cosa no existe realmente):
+
     - [Modelos de distribución de especies (SDM) con un conjunto de
       algoritmos de aprendizaje automático (*machine learning*).
-      *Aplicación a Pinus
-      occidentalis*](https://github.com/biogeografia-master/modelos-de-distribucion-de-especies/modelos-de-distribucion-de-especies-SDM.ipynb)
+      Aplicación a *Pinus
+      occidentalis*.](https://github.com/biogeografia-master/modelos-de-distribucion-de-especies/modelos-de-distribucion-de-especies-SDM.ipynb)
     - [Variables ambientales generadas por estadística zonal, usando el
       índices espacial H3 a resolución 7 (hexágonos de aproximadamente
-      3.8 km^2) y datos geoespaciales del catálogo de Earth
-      Engine](https://github.com/biogeografia-master/modelos-de-distribucion-de-especies/all_sources_all_variables_res_7.gpkg)
-      Estos datos te servirán para ver un cuaderno donde realicé la
-      predicción de distribución potencial de *Pinus occidentalis*, el
-      cual podrás usar para adaptarlo a tu especie. Te recomiendo que
-      intentes comprender la lógica del código, sin perderte en los
-      detalles. Sin embargo, es importante en este caso que intentes
-      ejecutar, celda a celda el código de Python (así se llaman los
-      bloques de código en cuadernos Jupyter); recuerda desactivar el
-      traductor para el servidor si aún lo tienes activado. Tal como lo
-      lees, es importante ejecutar celda a celda, para ver qué cosas
-      producen. Intentar comprenderlas también es importante, pero puede
-      resultar abrumador. Lo más importante es que adaptes el código de
-      dicho cuaderno a tu especie elegida, controlando en todo momento
-      los resultados obtenidos y editando las líneas allí donde tengas
-      que hacerlo (no son muchos lugares realmente que necesitas
-      personalizar) sobre él propio cuaderno. Recuerda que el código en
-      dicho cuaderno sigue una lógica secuencial, por lo que los bloques
-      posteriores dependerán de los anteriores.
+      3.8 km<sup>2</sup>) y datos geoespaciales del catálogo de Earth
+      Engine.](https://github.com/biogeografia-master/modelos-de-distribucion-de-especies/all_sources_all_variables_res_7.gpkg)
 
-**TIENES UN VÍDEO DE APOYO**. Esta vez, tienes un vídeo de apoyo
-exclusivo para esta práctica.
+    Estos datos te servirán para ver un cuaderno donde realicé la
+    predicción de distribución potencial de *Pinus occidentalis*, el
+    cual podrás usar para adaptarlo a tu especie. Te recomiendo que
+    intentes comprender la lógica del código, sin perderte en los
+    detalles. Sin embargo, es importante en este caso que intentes
+    ejecutar, celda a celda el código de Python (así se llaman los
+    bloques de código en cuadernos Jupyter); recuerda desactivar el
+    traductor para el servidor si aún lo tienes activado. Tal como lo
+    lees, es importante ejecutar celda a celda, para ver qué cosas
+    producen. Intentar comprenderlas también es importante, pero puede
+    resultar abrumador. Lo más importante es que adaptes el código de
+    dicho cuaderno a tu especie elegida, controlando en todo momento los
+    resultados obtenidos y editando las líneas allí donde tengas que
+    hacerlo (no son muchos lugares realmente que necesitas personalizar)
+    sobre él propio cuaderno. Recuerda que el código en dicho cuaderno
+    sigue una lógica secuencial, por lo que los bloques posteriores
+    dependerán de los anteriores.
 
-- []()
-
-3.  Revisa bibliografía sobre los algoritmos de predicción empleados (el
+5.  Revisa bibliografía sobre los algoritmos de predicción empleados (el
     ejemplo es una buena base, pero puedes incluir otras técnicas). No
     puedes usar estos algoritmos sin saber de qué tratan, aunque no
     tienes por qué entrar en los detalles. Los parámetros de
@@ -77,7 +77,7 @@ exclusivo para esta práctica.
     la bibliografía sobre este tema es muy densa, pero te recomiendo que
     consultes tanto libros como artículos científicos con casos de uso.
 
-4.  Vuelve a RStudio y, AHORA SÍ, clona el repo y redacta un manuscrito.
+6.  **Finalmente, ve a RStudio, clona el repo y redacta un manuscrito**.
     Para el procesamiento de tu texto y la redacción de tus análisis,
     usa la plantilla
     `manuscrito-modelos-de-distribucion-de-especies-SDM.Rmd`, que se
