@@ -1,5 +1,5 @@
 ---
-title: "Práctica de desarrollo 4. PD04. Modelos de distribución de especies (SDM) por medio de aprendizaje automático (*machine learning*)<small><br>Biogeografía (GEO-131)<br>Universidad Autónoma de Santo Domingo (UASD)<br>Semestre 2024-02</small>"
+title: "Práctica de desarrollo 4. PD04. Modelos de distribución de especies (SDM) por medio de aprendizaje automático (*machine learning*)<small><br>Biogeografía (GEO-131)<br>Universidad Autónoma de Santo Domingo (UASD)<br>Semestre 2025-01</small>"
 author: "El Tali"
 date: "`r format(Sys.Date(), '%Y-%m-%d')`"
 output:
@@ -47,22 +47,35 @@ if (grepl('gfm', output_format)) {
 
 # Fecha/hora de entrega
 
-**12 de noviembre de 2024, 11:59 pm.**
+**VER PORTAL DE LA ASIGNATURA**
 
 # Objetivos
+
+## General
+
+- Modelizar la distribución potencial de una especie en la República Dominicana utilizando aprendizaje automático con datos de presencia y variables ambientales.
+
+## Específicos
+
+- Seleccionar y preparar los datos de presencia de una especie en GBIF y variables ambientales del repositorio zonal.
+
+- Aplicar algoritmos de aprendizaje automático para modelizar la distribución de la especie.
+
+- Interpretar los resultados de las predicciones y analizar las variables ambientales clave.
+
 
 
 # Mandato
 
-1. **Acepta la asignación, genera tu repositorio personalizado y clónalo en tu cuenta del servidor RStudio**. Este paso sigue el procedimiento estándar que aprendiste en PD anteriores. De todas formas, te lo refresco de forma resumida. Primero ve al [portal de la asignatura](https://github.com/biogeografia-202402), haz clic en el enlace de la PD04 y acepta la asignación. Se creará un repositorio personalizado en la [organización biogeografia-202402](https://github.com/biogeografia-202402). El nombre de tu repo personalizado normalmente será algo tal que: "base del repo" + "tu nombre de usuario de GitHub" (como sufijo). Clona tu repositorio personalizado en el servidor RStudio. Para ello, deberás acceder al servidor con tus credenciales, copiar la ruta en GitHub de tu repo personalizado (botón verde `Code` en GitHub) y realizar el procedimiento estándar de nuevo proyecto con control de versiones en RStudio.
+1. **Acepta la asignación, genera tu repositorio personalizado y clónalo en tu cuenta del servidor RStudio**. Este paso sigue el procedimiento estándar que aprendiste en PD anteriores. De todas formas, te lo refresco de forma resumida. Primero ve al [portal de la asignatura](https://github.com/biogeografia-202501), haz clic en el enlace de la PD04 y acepta la asignación. Se creará un repositorio personalizado en la [organización biogeografia-202501](https://github.com/biogeografia-202501). El nombre de tu repo personalizado normalmente será algo tal que: "base del repo" + "tu nombre de usuario de GitHub" (como sufijo). Clona tu repositorio personalizado en el servidor RStudio. Para ello, deberás acceder al servidor con tus credenciales, copiar la ruta en GitHub de tu repo personalizado (botón verde `Code` en GitHub) y realizar el procedimiento estándar de nuevo proyecto con control de versiones en RStudio.
 
-2. **REPRODUCE EL VÍDEO DE APOYO** para comprender el código de Python y sus resultados. Tienes un vídeo de apoyo exclusivo para esta práctica, cuyo enlace encontrarás en el [portal de la asignatura](https://github.com/biogeografia-202402). El vídeo explica cómo realizar, y en qué consisten, los análisis necesarios para modelizar distribución de especies usando algoritmos de *machine learning* en Python, con aplicación a la especie *Pinus occidentalis* en República Dominicana.
+2. **REPRODUCE EL VÍDEO DE APOYO** para comprender el código de Python y sus resultados. Tienes un vídeo de apoyo exclusivo para esta práctica, cuyo enlace encontrarás en el [portal de la asignatura](https://github.com/biogeografia-202501). El vídeo explica cómo realizar, y en qué consisten, los análisis necesarios para modelizar distribución de especies usando algoritmos de *machine learning* en Python, con aplicación a la especie *Pinus occidentalis* en República Dominicana.
 
 3. Elige una especie en GBIF bien representada en República Dominicana. Esta fase es de exploración, así que usa mejor la [interfaz web de GBIF](https://gbif.org). "Bien representada" es difícil de definir, pero son elegibles aquellas especies con entre 200 y 500 registros de presencia. Si no logras una especie con un número de registros en ese rango, pues elige una que al menos tenga 100 registros. Lo más importante es que la especie elegida no tenga todos sus registros concentrados en un pequeño cúmulo. No se trata de elegir una especie que esté en todas partes, sino de una que tenga muchos registros bien distribuidos. Si notas que la especie candidata sigue el mismo patrón que el de alguna variable climática, de uso y cobertura, geológica o fisiográfica, es válida para la elección. Puedes preguntar al ChatGPT, aunque normalmente dicho LLM no acierta bien con los criterios.
 
-4. **IMPORTANTE**. Anuncia tu elección en el foro; si ya está elegida, deberás elegir otra.
+4. **IMPORTANTE**. Anuncia tu elección en el foro; si ya está elegida, deberás buscar otra opción.
 
-5. Inicia sesión en el servidor JupyterHub. Sube sólo los siguientes archivos a tu cuenta de JupyterHub (las cuentas del servidor de RStudio y de JupyterHub son independientes), tomándolos desde tu propio repo (los puedes obtener descárgandolos desde tu repo en GitHub, o desde el clon que tienes en el servidor de RStudio, y posteriormente subiéndolos a tu cuenta de JupyterHub):
+5. Inicia sesión en el servidor JupyterHub. Si no tienes cuenta en el servidor, pídela al tali. Sube sólo los siguientes archivos a tu cuenta de JupyterHub (las cuentas del servidor de RStudio y de JupyterHub son independientes), tomándolos desde tu propio repo (los puedes obtener descárgandolos desde tu repo en GitHub, o desde el clon que tienes en el servidor de RStudio, y posteriormente subiéndolos a tu cuenta de JupyterHub):
     - Archivo: `modelos-de-distribucion-de-especies-SDM.ipynb`. Es un cuaderno Jupyter, que contiene el desarrollo de Modelos de distribución de especies (SDM) por medio de aprendizaje automático (*machine learning*) con plicación a *Pinus occidentalis*. El nombre de archivo es largo, así que coloca el puntero del ratón momentáneamente sobre cualquier archivo que comience por "modelos..." y verifica el nombre completo del archivo en el *tooltip* flotante.
     - Archivo: `all_sources_all_variables_res_7.gpkg`. Es un archivo GeoPackage, conteniendo más de 130 variables ambientales generadas por estadística zonal, referidas al índices espacial H3 a resolución 7 (hexágonos de aproximadamente 3.8 km<sup>2</sup>) y datos geoespaciales del catálogo de Earth Engine.
 
